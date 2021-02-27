@@ -15,20 +15,15 @@ module.exports.isMutant = async (dna) => {
         if (utils.validarLetras(dna)) {
             dna = dna.replace(/[^A-Z,]/g, '');
             let adnArreglo = dna.split(',');
-            let secuencias = 0;
-            secuencias = await horizontal.adnHorizontal(adnArreglo);
-            if (!utils.esMutante(secuencias)) {
-                let arreglo = utils.separarLetrasAdn(adnArreglo);
-                let arregloVertical = utils.rotarMatriz(Object.assign([], arreglo));
-                secuencias += await vertical.adnVertical(arregloVertical);
-                if (!utils.esMutante(secuencias)) {
-                    secuencias += await oblicua.adnOblicua(Object.assign([], arreglo));
-                    if (!utils.esMutante(secuencias)) {
-                        let arregloOblicua = utils.rotarMatriz(Object.assign([], arreglo));
-                        secuencias += await oblicua.adnOblicua(arregloOblicua);
-                    }
-                }
-            }
+            let validar = [];
+            let arreglo = utils.separarLetrasAdn(adnArreglo);
+            let matrizRotada = utils.rotarMatriz(Object.assign([], arreglo));
+            validar.push(horizontal.adnHorizontal(adnArreglo));
+            validar.push(vertical.adnVertical(Object.assign([], matrizRotada)));
+            validar.push(oblicua.adnOblicua(Object.assign([], arreglo)));
+            validar.push(oblicua.adnOblicua(Object.assign([], matrizRotada)));
+            let result = await Promise.all(validar);
+            let secuencias = result.reduce((a, b) => a + b, 0);
             return utils.esMutante(secuencias);
         }
     } catch (error) {
