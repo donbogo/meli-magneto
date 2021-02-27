@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/donbogo/meli-magneto/issues"
   },
-  "homepage": "https://github.com/donbogo/meli-magneto#readme"
+  "homepage": "https://github.com/donbogo/meli-magneto#readme",
+  "dependencies": {
+    "mathjs": "^9.2.0"
+  }
 }
