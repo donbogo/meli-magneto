@@ -1,0 +1,20 @@
+{
+  "name": "meli-magneto",
+  "version": "1.0.0",
+  "description": "Detectar si un humano es mutante basándose en su secuencia de ADN.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donbogo/meli-magneto.git"
+  },
+  "author": "donbogo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donbogo/meli-magneto/issues"
+  },
+  "homepage": "https://github.com/donbogo/meli-magneto#readme"
+}
