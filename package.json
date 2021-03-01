@@ -4,8 +4,8 @@
   "description": "Detectar si un humano es mutante basándose en su secuencia de ADN.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha test/*.js --reporter=nyan",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/donbogo/meli-magneto/issues"
   },
-  "homepage": "https://github.com/donbogo/meli-magneto#readme"
+  "homepage": "https://github.com/donbogo/meli-magneto#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mathjs": "^9.2.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0",
+    "mock-express-response": "^0.3.0",
+    "nyc": "^15.1.0"
+  }
 }
