@@ -20,6 +20,19 @@ describe('Test es mutante true', function () {
     after(function () { });
 });
 
+describe('Test es mutante false', function () {
+    this.timeout(0);
+    beforeEach(function () { });
+    it('es mutante true', async () => {
+        const result = await app.isMutant("['ATGT','CATT','TTAT','TGAC']");
+        console.log('-------------------------------------------------------------');
+        console.log('Respuesta es mutante', JSON.stringify(result));
+        console.log('-------------------------------------------------------------');
+        expect(result).false;
+    });
+    after(function () { });
+});
+
 describe('Test mutant OK', function () {
     this.timeout(0);
     beforeEach(function () { });
@@ -33,6 +46,23 @@ describe('Test mutant OK', function () {
         }, new MockExpressResponse());
         console.log('-------------------------------------------------------------');
         expect(result.statusCode).to.equal(200);
+    });
+    after(function () { });
+});
+
+describe('Test mutant Forbidden', function () {
+    this.timeout(0);
+    beforeEach(function () { });
+    it('mutant test 403', async () => {
+        const result = await index.esMutante({
+            'body': { adn: ['ATGT','CATT','TTAT','TGAC'] },
+            'method': 'POST',
+            'headers': {},
+            'query': {},
+            'path': {}
+        }, new MockExpressResponse());
+        console.log('-------------------------------------------------------------');
+        expect(result.statusCode).to.equal(403);
     });
     after(function () { });
 });
