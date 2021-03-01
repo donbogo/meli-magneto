@@ -15,6 +15,7 @@ Para la instalación del proyecto ejecutar el comando:
 > $ npm install
 
 <br>
+
 ___
 
 ### Cómo usar
@@ -59,7 +60,9 @@ Localmente el proyecto puede ser ejecutado o probado por línea de comandos o le
  `{"adn": ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}`
 
 <br>
+
 ___
+
 ### Test-Automáticos, Code coverage
 Para correr las pruebas, primero instalar las dependencias y luego ejecutar:
  
