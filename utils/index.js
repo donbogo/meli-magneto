@@ -31,6 +31,7 @@ module.exports.esMutante = (secuencias) => {
  */
 module.exports.validarSecuenciaLetra = (adn, letra) => {
     return new Promise(async (resolve) => {
+        // Expresión regular para la validación de la secuencia
         let regexObj = new RegExp(`${letra}{${config.SECUENCIALETRAS}}`, 'g');
         resolve(regexObj.test(adn));
     });
