@@ -4,7 +4,8 @@
   "description": "Detectar si un humano es mutante basándose en su secuencia de ADN.",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text-summary mocha test/*.js --reporter=nyan"
+    "test": "nyc --reporter=lcov --reporter=text-summary mocha test/*.js --reporter=nyan",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
