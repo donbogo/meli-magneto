@@ -14,6 +14,7 @@ La instalación del proyecto se realiza utilizando el comando:
 > $ npm install
 
 <br>
+
 ### Cómo usar
 
 ##### Local
