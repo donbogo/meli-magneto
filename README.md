@@ -28,9 +28,10 @@ Localmente el proyecto puede ser ejecutado o probado por línea de comandos o le
 
  El servidor se levanta por el puerto 3008.
  Y se expone el servicio web: http://localhost:3008/api/mutant
+ 
  body: {"adn":["ATGT","CATT","TTAT","TGAZ"]}
  
- `$ npm star`
+ `$ npm start`
 
 ##### Docker
 
@@ -43,6 +44,7 @@ Localmente el proyecto puede ser ejecutado o probado por línea de comandos o le
 
  Una vez la imagen este corriendo se levanta un servidor por el puerto 3008.
   Y se expone el servicio web: http://localhost:3008/api/mutant
+ 
  body: {"adn":["ATGT","CATT","TTAT","TGAZ"]}
  ```bash
   docker run -d -p 3008:3008 <username>/magneto-mutant:0.1.0
