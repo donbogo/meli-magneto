@@ -64,10 +64,17 @@ Localmente el proyecto puede ser ejecutado o probado por línea de comandos o le
 ___
 
 ### Test-Automáticos, Code coverage
-Para correr las pruebas y la cobertura de código, primero instalar las dependencias **npm install** y luego ejecutar el test **npm test**:
+
+Para correr las pruebas y la cobertura de código, primero instalar las dependencias con el comando **npm install** y luego ejecutar el test con el comando **npm test**:
  
  > $ npm install
  
+ - Linux, Mac
+ 
  > $ npm test
+ 
+ - Windows
+ 
+ > $ npm run test-win
 
 <br>
